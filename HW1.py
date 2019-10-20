@@ -16,8 +16,7 @@ result_repo = []
 data = requests.get(url)
 j_data = data.json()
 
-for itm in j_data:
-    result_repo.extend(data.json()) #здесь ошибка так как делает шестизначную копию, из-за нехватки времени сдаю так пока.
+result_repo.extend(data.json()) 
 print(result_repo)
 
 with open (f'result_repo_{int(dt.now().timestamp())}.json', 'w') as j_file:
